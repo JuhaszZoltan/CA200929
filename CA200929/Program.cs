@@ -10,6 +10,12 @@ namespace CA200929
     {
         public string Nev { get; set; }
         public int Eletkor { get; set; }
+
+        public Tanulo(string nev, int eletkor)
+        {
+            Nev = nev;
+            Eletkor = eletkor;
+        }
     }
 
     struct Bolygo
@@ -68,6 +74,41 @@ namespace CA200929
                 new Bolygo() { Nev = "Mars", EgyenlitoHossz = 21338.32F, },
             };
 
+            //C#-ban létezik a több dimenziós vektor és a
+            //vektorokat tartalmazó vektor IS
+
+            int[,] m1 = new int[4, 10];
+            int[][] tt = new int[10][];
+
+            //tömbök elemeinek elérése
+
+            t1[0] = 2000;
+
+            //t1[200] = 44534; < --szemantikai hiba: ugyan "lehet"
+            //egy 100 elemű tömb 200-as indexű elemére hivatkozni
+            //de futás közben hibát fog dobni
+            //System.IndexOutOfRangeException: 
+            //egyik leggyakoribb hiba kezdő programozóknál
+
+            t10[0] = new Tanulo("Józsi", 17);
+
+            string nev = Console.ReadLine();
+            int kor = int.Parse(Console.ReadLine());
+            t10[1] = new Tanulo(nev, kor);
+
+            t1[0] = 10;
+
+            //tömbök bejárása
+
+            for (int i = 0; i < t9.Length; i++)
+            {
+                Console.WriteLine(t9[i]);
+            }
+
+            foreach (var e in t9)
+            {
+                Console.WriteLine(e);
+            }
 
 
 
