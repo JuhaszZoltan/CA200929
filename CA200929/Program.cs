@@ -104,14 +104,10 @@ namespace CA200929
             {
                 Console.WriteLine(t9[i]);
             }
-
             foreach (var e in t9)
             {
                 Console.WriteLine(e);
             }
-
-
-
             Console.ReadKey();
         }
     }
